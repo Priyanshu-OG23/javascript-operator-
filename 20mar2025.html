@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h2>maths operatiom </h2>
+        <p id="sum">addition of two number is : </p>        
+        <p id="sub">subtraction of two number is : </p>        
+        <p id="mult">multiplication of two number is : </p>        
+        <p id="div">division of two number is : </p>     
+        
+        
+        <script>
+            // function definition 
+            function add(num1,num2) // here num1 and num2 is formal argument 
+            {
+                return num1+num2;
+
+            }
+
+
+            // function definition 
+            function sub(num1,num2)  // here num 1 and num 2 is formal argumnet 
+            {
+                return num1-num2;
+            }
+            // function definition 
+            function mult(num1,num2)
+            {
+                return num1*num2;
+            }
+            // function definition 
+            function div(num1,num2)
+            {
+                return num1/num2;
+            }
+            // function calling 
+            let x=add(200,5);  // here 200 and 5 is a actual arguments 
+            let y=sub(200,5);
+            let z=mult(200,5);
+            let p=div(200,5);
+
+            // showing element in html documents 
+            document.getElementById('sum').innerHTML=" sum of two number is :  "+ x;
+            document.getElementById('sub').innerHTML="sub of two number is : "+ y;
+            document.getElementById('mult').innerHTML="multipliction  of two number is : "+ z;
+            document.getElementById('div').innerHTML="division of two number is : "+ p;
+
+
+            // fucntion definiton 
+            function myFunction(msg){ // msg is an formal argument 
+                // function body 
+                console.log("hey "+" "+ msg+ "how are you ?");
+
+                // here function b is getting called inside myFunction 
+                myFunctionB(10,30);
+                myFunctionB('10','30');
+                myFunctionB(10,'20');
+
+            }
+
+            // function calling 
+            myFunction('Priyanshu ');  // here priyanshu is an actual argument which are passed to msg in function definition 
+
+
+            // calling function from another function 
+
+            function myFunctionB(x,y)
+            {
+                console.log(x+y);
+            }
+        </script>
+    </body>
+</html>
