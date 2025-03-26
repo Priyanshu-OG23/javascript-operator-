@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script>
+        window.onload= function() {
+        // fucntion definition 
+            function myFunction(x,y)  // x and y are  formal argument 
+            {
+                // function body 
+                // console.log(x*y);
+
+                // function may return something 
+                return x*y;
+
+
+
+            }
+
+
+            // function calling 
+            var z= myFunction(10,20); // 10 and 20 are actual parameter / actual argument 
+            document.getElementById("demo").innerHTML= z;
+            let a=myFunction(200,70);
+            console.log(z)
+
+            var b=myFunction(80,myFunction(20,60));
+            console.log(b);
+            alert(b);
+
+
+            // array declration in javscript 
+            var students=['anil','priyanshu','rohan','satish','mahamood','tanu','priyanka'];
+            console.log(students[0]);
+            console.log(students[1]);
+            console.log(students[2]);
+            console.log(students[3]);
+            console.log("---------------------------------------------")
+            // greetig every element inside the array using loop 
+            for(i=0;i<students.length;i++)
+            {
+                console.log('hello '+students[i]+" how are you ? ");
+            }
+            // greetig every element inside the array using function 
+
+            function greet()
+            {
+                for(i=students.length-1;i>=0;i--)
+                {
+                    console.log("hello "+ students[i]+"  how are you ")
+
+             }
+            
+            }
+
+            let by=greet();
+            console.log(by)
+
+
+
+    }
+
+    </script>
+</head>
+<body>
+
+    <h1 id="demo"></h1>
+    
+</body>
+</html>
