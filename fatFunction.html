@@ -7,11 +7,87 @@
         <style>
 
         </style>
+        <script>
+
+        </script>
     </head>
     <body>
+        <h1 id="normalFunc">this is a normal function </h1>
+        <h1 id="arrowFunc">this is an arrow function </h1>
 
      <script>
+        // traditional function 
+        function myFunction()
+        {
+            // my rookie mistake 
+           // console.log("Hello everyone "); // by writing this we will get undefined since
+            // none of them returning any value
+
+            // fixed 
+            return "hello everyone";
+        }
+
+
+        // arrow function 
+
+        let hello=()=>
+        {
+            // my rookie mistake 
+            //  console.log("this is an arrow function ") // by writing this we will get undefined since none 
+            // of them returning any value 
+
+            // code fixed 
+            return "hello every one  ";
+
+        }
+        let a=myFunction();
+        document.getElementById('normalFunc').innerHTML= a + " this is a normal function ";
+        let b=hello();
+        document.getElementById('arrowFunc').innerHTML= b + " this is an arrow function ";
+
+
+        // spread operator : it is used to copy the element of array into another array 
+        let stud=['Priyanshu','Piya','vishnu'];
+        console.log(stud);
+
+        let spr=[...stud,'Mahamood','surjit','Mudashir'];
+        console.log(spr);
+
+
+        // practicing spread operator 
+
+        let arr1=["hello","world"];
+        let arr2=[...arr1,"this","is","gonna"];
+        let arr3=[...arr2,"be","my","practice"];
+        let arr4=[...arr3,"on","spread","operator"]
+
+        // printing the operator inside as array 
+        console.log(arr4);
+
+        // printing the operator as a senetence 
+        let paragraph= '';
+
+
+        for(var i=0;i<arr4.length;i++)
+        {
+            console.log(arr4[i]);
+            paragraph=paragraph+arr4[i] + " ";
+        }
         
+        console.log(paragraph);
+        
+
+
+
+
+        
+        
+
+
+
+
+
+
      </script>   
     </body>
 </html>
