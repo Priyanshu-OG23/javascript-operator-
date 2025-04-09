@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <p id="series">
+            Your total is =
+        </p>
+
+
+
+       
+
+        <script>
+
+
+            function sumOfseries(x){
+
+                if(x==0)
+                {
+                    return 0;
+                }
+
+                return x + sumOfseries(x-1);
+
+            }
+
+            let f=sumOfseries(5);
+            document.getElementById("series").innerHTML="your total is "+ f;
+
+
+
+            // Javascript object 
+
+            const Person={
+                name:"Alice",
+                age:25,
+                isStudent:false,
+                hobbies:['reading','hiking'],
+                greet:function(){
+                    console.log("hello, my name is "+ this.name);
+                }
+
+
+            }
+            console.log(Person.name);
+            console.log(Person.age);
+            console.log(Person.hobbies[0]);
+            console.log(Person.greet());
+
+
+
+            // 2nd examples
+            /*
+                let/var/const objName=
+                {
+                    Property:value,
+                    property:value,
+                    functionName:function();
+
+
+
+                }
+
+                // to acess object value 
+                obj.member;
+                obj.member;
+                obj.memeber;
+            
+            
+            
+            
+            */
+            var students={
+                name:"Priyanshu",
+                age:24,
+                hobbies:['Anime','Listening songs '], // this js object contain a array as property
+                isgraduate:true,
+                friend:[
+                {name:"mahamood",contact:98344934},
+                {name:"satish",contact:98752345},
+                {name:"sunil",contact:8573732734}
+            ],
+                // functionName:function
+                namaste:function ()
+                {
+                    console.log("hello this is "+this.name);
+
+                }
+                
+
+
+            };
+            for(var j=0;j<students.friend.length;j++)
+            {
+                console.log("hello "+ students.friend[j].name+"  how  are you  ? ");
+            }
+            
+
+            var x=['Priyanshu','Satish',"Mahamood","Rohan","Barkat",students]
+            
+            // this array contain 
+            // js object as a value 
+            /* for(intitilization ; condtion ; increment/decrement)
+            {
+                // block  of code 
+            )
+            */
+            for(var i=0;i<x.length;i++)
+            {
+                console.log("the name of the friend  in array is : "+x[i]);
+            }
+
+            console.log(students.name);
+            console.log(students.age);
+            console.log(students.hobbies[1]);
+            console.log(students.namaste());
+
+
+        
+
+
+
+            
+            
+        </script>
+    </body>
+</html>

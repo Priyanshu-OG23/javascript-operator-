@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Javascript object </title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+
+        
+        
+
+        <script>
+            /*
+                // declaring an object 
+                let x={
+
+                    //Members in object 
+                        1 Property:value,
+                        2 functionName:function()
+                        {
+                            console.log()
+                        
+                        }
+                }
+
+            
+            */
+            let bioData={
+                name:"priyanshu",
+                age:24,
+                ismarried:false,
+                
+                collegefriend:[{name:"vipul",contact:785348752},
+                {name:"shivam pal",contact:87648374},
+                {name:"chandan",contact:78755789},
+                {name:"sajid",contact:7658742392},
+                {name:"himanshu Prashar",contact:76328742392},
+                {name:"sahil Gupta",contact:79763392},
+                {name:"Utsav",contact:79763392},
+
+                ]
+                
+            }
+
+            console.log(bioData.name);
+            console.log(bioData.age);
+            console.log(bioData.gender);
+
+            // iterating collegeFriend using loops 
+            for(let i=0;i<bioData.collegefriend.length;i++)
+            {
+                console.log("hello " + bioData.collegefriend[i].name + " how are you doing ? " )
+                console.log("your friend "+bioData.collegefriend[i].name+ " contact number is "+ bioData.collegefriend[i].contact);
+            }
+
+            let z=[1,2,3,5,3,53,43,5];
+            z.forEach(element => {
+                console.log(element)
+                
+            });
+            // another types of for loop 
+
+            /* 
+                ways to remember this loop 
+
+                for(singular of plural)
+                {
+                    // code to be executed 
+                }
+                oR
+                for(variable of iterables )
+                {
+                    // CODE TO BE EXECUTED 
+                }
+            
+            */
+           let teachers=["bumkin","renu","meiraba"];
+           for(teacher of teachers)
+           {
+                console.log(teacher);
+           }
+
+           let x={
+            name:"priyanshu",
+            surname:"pandey",
+
+            /* function declaration  in objects 
+              syntax functionName:function()
+                {
+
+                 }
+
+
+            */ 
+        //    function definition 
+           functionName:function()  // formal arguments 
+           {
+                console.log("my name is "+ this.name +" "+ this.surname)
+            // when we use this operator or function meaning we are talking about the same object  
+            // this keyword represent current object 
+            // this is a current object identifier 
+
+
+           }
+            
+
+        }
+        // function calling 
+        console.log(x.functionName()) 
+
+        </script>
+    </body>
+</html>

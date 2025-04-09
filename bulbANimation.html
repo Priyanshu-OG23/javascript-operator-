@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        .center{
+            width: 400px;
+            height:400px;
+            margin: auto;
+            text-align: center;
+        }
+        
+
+    </style>
+    <script>
+    // function defifniton 
+    function clickMe(state)  // state is a formal argument which tell us about 
+    // the state of the bulb 
+    {
+        // alert(state);
+        // object.member.member.member
+        /*
+        if(conditon)
+        { 
+            // true 
+        }else{
+            // false 
+        }
+        */
+       if(state=='on')
+       {
+            // true 
+            document.body.style.backgroundColor="yellow";
+            // object.method.method
+            document.getElementById('myImage').setAttribute('src','img/bulb2.png');
+
+       }
+       else{
+        // false
+            document.body.style.backgroundColor="black";
+            document.getElementById('myImage').setAttribute('src','img/bulb1.png');
+
+       }
+
+        
+        
+    }
+    // i have created another function to make color black but it will work 
+    // but it's does not follow DRY(Don't repeat yourself principle )
+    // function offFunction()
+    // {
+    //     document.body.style.backgroundColor='black';
+    // }
+
+
+
+    </script>
+</head>
+<body>
+    <div class="center">
+        <img src="img/bulb1.png" alt="" width="200" id="myImage">
+        <button onclick="clickMe('on')">ON</button>
+        <button onclick="clickMe('off')">OFF</button>
+
+    </div>
+    
+
+    <script>
+
+    </script>
+</body>
+</html> 

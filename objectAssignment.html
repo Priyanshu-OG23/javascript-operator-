@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+             let object={
+                // property declaration 
+                aa:"hello AA",
+
+                // method declaration 
+                myFunctionA:function()
+                {
+                    console.log(this.aa);
+                },
+                bb:"hello BB",
+                myfunctionB:function()
+                {
+                    console.log(this.bb);
+
+                },
+                cc:"Hello CC",
+                myfunctionC:function()
+                {
+                    console.log(this.cc);
+                },
+                dd:"Hello DD",
+                myFunctionD:function()
+                {
+                    console.log(this.dd);
+                },
+                ee:"hello EE",
+                // arrow function will error since its does not have its own this object 
+                // myFunctionE:(msg)=>{
+                //     console.log(this.ee+msg)
+                // }
+               
+                myFunctionE:function(msg)
+                {
+                    return(this.ee + msg);
+                },
+
+                ff:"hello FF",
+                myFunctionF:function()
+                {
+                    return(this.ff);
+                }
+
+                
+
+                
+
+            }
+            console.log(object.myFunctionE( "  how are you ? "));
+            console.log(object.myFunctionA());
+            console.log(object.myfunctionB());
+            console.log(object.myfunctionC());
+            console.log(object.myFunctionD());
+            console.log(object.myFunctionE(" how are you ? "));
+            console.log(object.myFunctionF());
+        </script>
+       
+        
+    </body>
+</html>
